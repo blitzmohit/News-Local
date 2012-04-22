@@ -3,7 +3,8 @@
 <html>
   <head>
     <title>News-Local | A Dart Hackathon Project</title>
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+//commented out as same functionality implemented in DART
+/*<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
 
 <script type="text/javascript">
 function initialize() {
@@ -80,10 +81,19 @@ function errorFunction(){
       }
     });
   }
+</script>*/
+<script type="text/javascript"> 
+function callbackForJsonpApi(s) {
+  		window.postMessage(JSON.stringify(s), '*');
+	}
+function callbackForMapsApi(s) {
+  		window.postMessage(JSON.stringify(s), '*');
+	}	
 </script>
 <link type="text/css" rel="stylesheet" href="NewsLocal.css">
 </head> 
-<body onload="initialize()"> 
+//<body onload="initialize()"> 
+<body>
   	<table>
     	<tbody>
     	<tr>
